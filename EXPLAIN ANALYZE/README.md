@@ -1,4 +1,4 @@
-&gt; explain analyze VERBOSE  select actor_id,first_name, last_name,last_update from actor
+1. explain analyze VERBOSE  select actor_id,first_name, last_name,last_update from actor
 
 2. explain analyze VERBOSE  select first_name, last_name from actor where actor.first_name='Nick'
 
