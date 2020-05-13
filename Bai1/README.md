@@ -67,3 +67,22 @@
 - Seq Scan on language => Seq Scan on film => Hash =>  Hash Join => HashAggregate => Sort
 	
 5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+
+# Câu 6
+1. Số lượng các node : 8
+2. Thông tin chi tiết của từng node: Cost, rows, width
+- Seq Scan on film  (cost=0.00..64.00 rows=1000 width=4)
+- Hash  (cost=64.00..64.00 rows=1000 width=4)
+- Seq Scan on actor  (cost=0.00..4.00 rows=200 width=17)
+- Seq Scan on film_actor  (cost=0.00..84.62 rows=5462 width=4)
+- Hash  (cost=4.00..4.00 rows=200 width=17)
+- Hash Join  (cost=76.50..175.51 rows=5462 width=6)
+- Hash Join  (cost=83.00..196.65 rows=5462 width=17)
+- HashAggregate  (cost=237.62..238.90 rows=128 width=21)
+3. Node nào được chạy đầu tiên
+- Seq Scan on film
+4. Trình tự thực hiện các node
+- Seq Scan on film => Hash  |
+- Seq Scan on actor => Hash |=> Hash Join => Hash Join=> HashAggregate
+- Seq Scan on film_actor    |
+5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
