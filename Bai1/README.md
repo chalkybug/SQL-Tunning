@@ -1,3 +1,4 @@
+#Nguyễn Đức Lương
 # Câu 1
 1. Số lượng các node : 2
 2. Thông tin chi tiết của từng node: Cost, rows, width
