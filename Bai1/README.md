@@ -1,8 +1,8 @@
 # Câu1
 1. Số lượng các node : 2
 2. Thông tin chi tiết của từng node: Cost, rows, width
-	*Seq Scan: (cost=0.00..69.00 rows=43 width=174)
-	*Sort : cost=70.17..70.27 rows=43 width=174
+- Seq Scan: (cost=0.00..69.00 rows=43 width=174)
+- Sort : cost=70.17..70.27 rows=43 width=174
 3. Node nào được chạy đầu tiên
 	*Seq Scan
 4. Trình tự thực hiện các node
