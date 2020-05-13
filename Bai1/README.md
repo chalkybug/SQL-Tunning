@@ -21,7 +21,7 @@
 4. Trình tự thực hiện các node
 - Seq Scan => HashAggregate => Sort
 	
-5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+5. ![alt text](https://github.com/chalkybug/SQL-Tunning/blob/master/Bai1/1%20(2).png)
 
 # Câu 3
 1. Số lượng các node : 3
@@ -34,7 +34,7 @@
 4. Trình tự thực hiện các node
 - Seq Scan => HashAggregate => Sort
 	
-5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+5. ![alt text](https://github.com/chalkybug/SQL-Tunning/blob/master/Bai1/1%20(3).png)
 
 # Câu 4
 1. Số lượng các node : 5
@@ -49,7 +49,7 @@
 4. Trình tự thực hiện các node
 - Seq Scan on language => Seq Scan on film => Hash =>  Hash Join => Sort
 	
-5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+5. ![alt text](https://github.com/chalkybug/SQL-Tunning/blob/master/Bai1/1%20(4).png)
 
 
 # Câu 5
@@ -66,7 +66,7 @@
 4. Trình tự thực hiện các node
 - Seq Scan on language => Seq Scan on film => Hash =>  Hash Join => HashAggregate => Sort
 	
-5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+5. ![alt text](https://github.com/chalkybug/SQL-Tunning/blob/master/Bai1/1%20(5).png)
 
 # Câu 6
 1. Số lượng các node : 8
@@ -85,7 +85,7 @@
 - Seq Scan on film => Hash  |
 - Seq Scan on actor => Hash |=> Hash Join => Hash Join=> HashAggregate
 - Seq Scan on film_actor    |
-5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+5. ![alt text](https://github.com/chalkybug/SQL-Tunning/blob/master/Bai1/1%20(6).png)
 
 # Câu 7
 1. Số lượng các node : 12
@@ -113,4 +113,4 @@
 - **1**				     | => Nested Loop                 |
 - 				         Seq Scan on category => Hash | => Nested Loop => Hash Join 
 					 Seq Scan on actor 	      |
-5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+5. ![alt text](https://github.com/chalkybug/SQL-Tunning/blob/master/Bai1/1%20(7).png)
