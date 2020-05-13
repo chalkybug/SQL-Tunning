@@ -8,7 +8,7 @@
 4. Trình tự thực hiện các node
 - Seq Scan => Sort
 	
-5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+5. ![alt text](https://github.com/chalkybug/SQL-Tunning/blob/master/Bai1/1%20(1).png)
 
 # Câu 2
 1. Số lượng các node : 3
