@@ -86,3 +86,31 @@
 - Seq Scan on actor => Hash |=> Hash Join => Hash Join=> HashAggregate
 - Seq Scan on film_actor    |
 5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+
+# Câu 7
+1. Số lượng các node : 12
+2. Thông tin chi tiết của từng node: Cost, rows, width
+- Hash Join  (cost=36.28..71.88 rows=23 width=196)
+- Nested Loop  (cost=34.92..70.45 rows=23 width=130)
+- Seq Scan on actor  (cost=0.00..4.50 rows=1 width=17)
+- Nested Loop  (cost=34.92..65.72 rows=23 width=119)
+- Hash Join  (cost=34.64..53.28 rows=23 width=8)
+- Seq Scan on film_category  (cost=0.00..16.00 rows=1000 width=4)
+- Hash  (cost=34.36..34.36 rows=23 width=4)
+- Bitmap Heap Scan on film_actor  (cost=4.46..34.36 rows=23 width=4)
+- Bitmap Index Scan on film_actor_pkey  (cost=0.00..4.46 rows=23 width=0)
+- Index Scan using film_pkey on film  (cost=0.28..0.53 rows=1 width=119)   
+- Hash  (cost=1.16..1.16 rows=16 width=72)
+- Seq Scan on category  (cost=0.00..1.16 rows=16 width=72)
+
+3. Node nào được chạy đầu tiên
+-  Bitmap Index Scan on film_actor_pkey
+4. Trình tự thực hiện các node
+- Bitmap Index Scan on film_actor_pkey =>  Bitmap Heap Scan on film_actor => Hash  |
+- Seq Scan on film_category                                                        |=> Hash Join **1**
+
+- Index Scan using film_pkey on film |
+- **1**				     | => Nested Loop                 |
+- 				         Seq Scan on category => Hash | => Nested Loop => Hash Join 
+					 Seq Scan on actor 	      |
+5. ![alt text](https://images.pexels.com/photos/1030982/pexels-photo-1030982.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
