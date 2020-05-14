@@ -15,3 +15,5 @@ order by first_name,last_name
 5. explain analyze VERBOSE 
 select city.city, country.country from city
  inner join country on city.country_id= country.country_id
+ 
+ 6. 
