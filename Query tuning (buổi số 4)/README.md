@@ -5,19 +5,19 @@
 
 
 2.
-explain analyze
+- explain analyze
 select s2.order_id from sales_history2 s2 EXCEPT select s.order_id from sales_history s
 
 
 3.
-explain analyze
+- explain analyze
 select c.customer_name,c.customer_id,c.customer_tel
 from customer c
 inner join sales_history s on c.customer_id=s.customer_id
 
 
 4.
-explain analyze
+- explain analyze
 select s.product_id,s.customer_id,s.order_id
 from sales_history s
 inner join customer c on c.customer_id=s.customer_id
